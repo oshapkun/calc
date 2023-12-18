@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошторис</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.css">
+  </head>
+  <body>
+    <main>
+      <form id="form" class="form">
+        <h1>Калькулятор вартості ремонту</h1>
+        <p class="form__subtitle">Базова ціна: 1 м² = 2700 гривень</p>
+
+        <section class="form__section">
+          <label class="form__wrapper">
+            <h4>Площа квартири:</h4>
+            <input
+              type="number"
+              min="0"
+              max="200"
+              value="50"
+              id="square_input"
+              class="input__short"
+            >
+            <h4>м²</h4>
+          </label>
+          <input
+            type="range"
+            min="0"
+            max="200"
+            value="50"
+            step="1"
+            id="square_range"
+            class="input__range"
+          >
+        </section>
+
+        <section class="form__section">
+          <h4>Тип ремонту</h4>
+          <div class="form__wrapper--radio">
+            <label>
+              <input
+                type="radio"
+                name="type"
+                value="1"
+                class="input__radio"
+              >
+              <span>Косметичний</span>
+            </label>
+              
+            <label class="input__block">
+              <input
+                type="radio"
+                name="type"
+                value="2.5"
+                class="input__radio"
+                checked
+              >
+              <div class="input__block--wrapper">
+                <span>Комплексний</span>
+                <span class="form__note">від 6750 грн/м²</span>
+              </div>
+            </label>
+              
+            <label class="input__block">
+              <input
+                type="radio"
+                name="type"
+                value="3.5"
+                class="input__radio"
+              >
+              <div class="input__block--wrapper">
+                <span>Дизайнерський</span>
+                <span class="form__note">від 9450 грн/м²</span>
+              </div>
+            </label>
+          </div>
+        </section>
+
+        <section class="form__section">
+          <h4>Тип будинку</h4>
+          <div class="form__wrapper--radio">
+            <label>
+              <input
+                type="radio"
+                name="building"
+                value="1"
+                class="input__radio"
+                checked
+              >
+              <span>Новобудова</span>
+            </label>
+            <label class="input__block">
+              <input
+                type="radio"
+                name="building"
+                value="1.1"
+                class="input__radio"
+              >
+              <div class="input__block--wrapper">
+                <span>Вторинний ринок</span>
+                <span class="form__note">+10% до вартості</span>
+              </div>
+            </label>
+          </div>
+        </section>
+
+        <section class="form__section">
+          <h4>Кількість кімнат</h4>
+          <div class="input__rooms--wrapper">
+            <label class="input__rooms--label">
+              <input
+                type="radio"
+                name="rooms"
+                value="1"
+                class="input__rooms--hidden"
+              >
+              <span class="input__rooms">1</span>
+            </label>
+
+            <label class="input__rooms--label">
+              <input
+                type="radio"
+                name="rooms"
+                value="1"
+                class="input__rooms--hidden"
+                checked
+              >
+              <span class="input__rooms">2</span>
+            </label>
+
+            <label class="input__rooms--label">
+              <input
+                type="radio"
+                name="rooms"
+                value="1.05"
+                class="input__rooms--hidden"
+              >
+              <span class="input__rooms">3</span>
+            </label>
+
+            <label class="input__rooms--label">
+              <input
+                type="radio"
+                name="rooms"
+                value="1.05"
+                class="input__rooms--hidden"
+              >
+              <span class="input__rooms">4</span>
+            </label>
+
+            <label class="input__rooms--label">
+              <input
+                type="radio"
+                name="rooms"
+                value="1.05"
+                class="input__rooms--hidden"
+              >
+              <span class="input__rooms">5</span>
+            </label>
+          </div>
+        </section>
+
+        <section class="form__section">
+          <h4>Додаткові опції</h4>
+          <div class="form__wrapper--radio">
+            <label class="input__block">
+              <input
+                type="checkbox"
+                name="ceiling"
+                value="410"
+                class="input__radio"
+              >
+              <div class="input__block--wrapper">
+                <span>Натяжні стелі</span>
+                <span class="form__note">410 грн/м²</span>
+              </div>
+            </label>
+
+            <label class="input__block">
+              <input
+                type="checkbox"
+                name="walls"
+                value="1.1"
+                class="input__radio"
+              >
+              <div class="input__block--wrapper">
+                <span>Фарбування стін</span>
+                <span class="form__note">+10% до вартості</span>
+              </div>
+            </label>
+
+            <label class="input__block">
+              <input
+                type="checkbox"
+                name="floor"
+                value="1.1"
+                class="input__radio"
+              >
+              <div class="input__block--wrapper">
+                <span>Тепла підлога</span>
+                <span class="form__note">+10% до вартості</span>
+              </div>
+            </label>
+          </div>
+        </section>
+
+        <section class="form__calc">
+          <h4>Вартість ремонту:</h4>
+          <div class="form__total">
+            <span id="total_price" class="form__calc--number">0</span>
+            <span id="price_text">гривень</span>
+          </div>
+        </section>
+      </form>
+    </main>
+
+    <script type="text/javascript" src="./scripts/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+h1 {
+  margin: 0;
+  font-weight: 900;
+  line-height: 130%;
+  font-size: 30px;
+  text-align: center;
+
+  @include onTablet {
+    font-size: 38px;
+  }
+
+  @include onDesktop {
+    font-size: 46px;
+  }
+}
+
+h4 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  align-items: center;
+  line-height: 130%;
+}
+

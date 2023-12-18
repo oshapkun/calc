@@ -1,0 +1,65 @@
+.form {
+  padding-block: 50px;
+
+  &__wrapper {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+
+    &--radio {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    text-align: center;
+    margin-block: 20px 50px;
+  }
+
+  &__section {
+    padding: 40px 50px;
+    background-color: $section-bg;
+
+    &:nth-child(even) {
+      margin-top: 0;
+      background-color: #fff;
+    }
+
+    &--title {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+      align-items: center;
+    }
+  }
+
+  &__note {
+    display: block;
+    font-weight: 300;
+    font-style: italic;
+    padding-top: 10px;
+    color: #969696;
+  }
+
+  &__total {
+    margin-top: 15px;
+  }
+
+  &__calc {
+    padding: 30px 50px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    box-shadow: -10px 0px 25px rgba(143, 179, 195, 0.685);
+
+    &--number {
+      font-size: 22px;
+    }
+  }
+}
